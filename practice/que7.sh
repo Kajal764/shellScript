@@ -15,10 +15,12 @@ do
 	read -p "is this your no $mid    "   input
 	if [[ $input -eq 0 ]]
 	then
-		mid=$(( $mid-1 ))
+		high=$mid
+		mid=$(((( $low+$high )) / 2))
 	elif [[ $input -eq 2 ]]
 	then
-		mid=$(($mid+1))
+		low=$mid
+		mid=$(((( $low+$high )) / 2))
 	elif [[ $input -eq 1 ]]
 	then
 		echo "this is your no $mid"

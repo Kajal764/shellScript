@@ -1,0 +1,29 @@
+#!/bin/bash -x
+
+echo "think a no within range of 1 to 100"
+low=0
+high=100
+mid=$(((($low+$high)) / 2 ))
+
+
+
+do
+	if [[ $no -lt $a ]]
+	then
+		a=$($a-1)
+		if [[ $a -eq $no ]]
+		then
+			echo "no matched"
+			break
+	else 
+		a=$($a+1)
+		 if [[ $a -eq $no ]]
+                 then
+                        echo "no matched"
+                        break
+	fi
+	i=$($i+1)
+done
+
+b=$(($a))
+echo "magic no is $b"
